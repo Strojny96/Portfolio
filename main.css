@@ -25,12 +25,16 @@ a{
 }
 
 p{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 300;
 }
 
+li{
+    margin: 0 2rem;
+}
+
 img{
-    width: 100%;
+    width: 90%;
 }
 
 section{
@@ -40,7 +44,6 @@ section{
 /*Reusable*/
 .container{
     width: 80%;
-    max-width: 120rem;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -85,7 +88,7 @@ section{
 /*Header*/
 header{
     width:100%;
-    height:100vh;
+    height:90vh;
 }
 
 .top-nav{
@@ -109,10 +112,6 @@ header{
     align-items: center;
 }
 
-li{
-    margin: 0 2rem;
-}
-
 .nav-link{
     font-family: 'Kaushan Script', sans-serif;
     font-size: 3rem;
@@ -132,7 +131,7 @@ li{
 
 .menu-toggler{
     position: fixed;
-    top: 2rem;
+    top: 3rem;
     right: 5rem;
     width: 4rem;
     height: 3rem;
@@ -207,11 +206,12 @@ li{
 /*About*/
 
 .about{
-    height: 100vh;
+    height: 80vh;
 }
 
 .profile-image{
-    margin-right: 1.5rem;
+    margin-right: 1rem;
+    width: 60%;
 }
 
 .about .container{
@@ -258,7 +258,12 @@ li{
 
 
 /*Skills*/
+.experience-skill{
+    height: 80vh;
+}
+
 .my-skills{
+    padding: 2rem 0 0 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     text-align: center;
@@ -269,7 +274,7 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .skill h1{
@@ -300,14 +305,12 @@ li{
 
 /*Experience*/
 .my-work{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2rem;
+    height: 60vh;
 }
 
 .my-work-item{
     margin: 0 auto;
-    width: 40%;
+    width: 50%;
 }
 
 .my-work-item h1{
@@ -319,12 +322,12 @@ li{
 
 .my-work-item img{
     border: 2px solid #ffe838;
-    height: 200px;
+    margin: 0 0 0 30px;
 }
 
 .project-description{
     text-align: center;
-    padding: 5px 0;
+    padding: 20px 0;
 }
 
 .link-buttons{
@@ -336,7 +339,7 @@ li{
 .link-buttons button{
     padding: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: #eee;
     border: 2px solid  #ffe838;
     border-radius: 5px;
@@ -351,12 +354,17 @@ li{
 /*Hobby*/
 
 .hobby-container{
+    height: 50vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
 }
 
 .hobby-item{
-    width: 80%;
+    width: 90%;
+}
+
+.hobby-img img{
     margin: 0 auto;
 }
 
@@ -369,7 +377,7 @@ li{
 
 .hobby-description p{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 
@@ -384,10 +392,134 @@ li{
 
 
 /*Media queries*/
-@media screen and (max-width: 375px) {
-    body{
-        background: url("https://vanterek.github.io/Portfolio/images/sitebg2.jpg") no-repeat center fixed;
-        background-size: cover;
+@media (max-width: 1440px) {
+    header{
+        height: 100vh;
+    }
+
+    p{
+        font-size: 1.6rem;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .nav-link{
+        font-size: 2.5rem;
+    }
+
+    .about{
+        height: 100vh;
+    }
+
+    .profile-image{
+        padding: 0 .5rem;
+    }
+
+    .my-skills{
+        grid-gap: .5rem;
+    }
+
+    .my-work-item img{
         margin: 0 auto;
+    }
+
+    .my-work{
+        grid-gap: 0;
+    }
+
+    .my-work-item{
+        height: 90vh;
+    }
+
+    .link-buttons button{
+        font-size: 15px;
+    }
+
+    .hobby-description p{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        background: url('./images/sitebg2.jpg') no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .about{
+        height: 80vh;
+    }
+
+    .menu-toggler{
+        right: 2rem;
+    }
+
+    .nav-link{
+        font-size: 2.2rem;
+    }
+    .profile-image{
+        display: none;
+    }
+
+    .experience-skill{
+        height: 100vh;
+    }
+    .my-skills{
+        padding: 0;
+        grid-template-columns: 1fr 1.1fr;
+        column-gap: 4rem;
+    }
+
+    .my-work-item{
+        width: 80%;
+    }
+
+    .hobby-container{
+        height: 80vh;
+        grid-template-columns: .5fr;
+        grid-template-rows: .5fr;
+        justify-content: center;
+    }
+
+    .hobby-item{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .hobby-container p{
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    header{
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .menu-toggler{
+        right: 6rem;
+    }
+    
+    .top-nav{
+        height: 120vh;
+        top: -120vh;
+        right: 0;
+        transition: all 650ms ease-in-out;
+    }
+    .top-nav.open{
+        top: 0;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    .nav-link{
+        font-size: 3rem;
+    }
+
+    .about{
     }
 }

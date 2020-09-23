@@ -16,13 +16,13 @@ const menu = () => {
         })
     })
 
-    /*navLink.forEach(navLink => {
+    navLink.forEach(navLink => {
         navLink.addEventListener('click', () => {
             menuToggler.classList.toggle('open');
             topNav.classList.toggle('open');
             menu();
         })
-    });*/
+    });
 
 }
 menu();
