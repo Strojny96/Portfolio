@@ -414,7 +414,7 @@ header{
     }
 
     .profile-image{
-        padding: 0 .5rem;
+        padding: 0 1rem;
     }
 
     .my-skills{
@@ -508,20 +508,46 @@ header{
 }
 
 @media (max-width: 425px) {
-    .top-nav{
-        display: none;
-    }
-    .menu-toggler{
-    }
-
     header{
+        width: 90vw;
+    }
+    
+    .landing-text:{
+        left: 30%;
+        width: 100vw;
+    }
 
+    .menu-toggler{
+        left: 2rem;
+    }
+
+    .top-nav{
+        height: 100vh;
+        right: -100vw;
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    } 
+
+    .top-nav .open{
+        right: 0;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    .nav-link{
+        font-size: 3.5rem;
     }
 
     section{
         padding: 0;
     }
-    
+
+    .section-heading{
+        margin: 15rem 0 10rem 0;
+    }
+
     .section-heading h1{
         font-size: 3rem;
     }
