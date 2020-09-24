@@ -448,6 +448,14 @@ header{
         background-size: cover;
     }
 
+    section{
+        padding: 0 10rem;
+    }
+
+    .section-heading{
+        margin: 15rem 0;
+    }
+
     .about{
         height: 80vh;
     }
@@ -466,60 +474,59 @@ header{
     .experience-skill{
         height: 100vh;
     }
+
+    .my-work-item{
+        width: 100%;
+    }
+
     .my-skills{
         padding: 0;
         grid-template-columns: 1fr 1.1fr;
         column-gap: 4rem;
     }
 
-    .my-work-item{
-        width: 80%;
-    }
-
     .hobby-container{
-        height: 80vh;
-        grid-template-columns: .5fr;
-        grid-template-rows: .5fr;
+        height: 70vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 1fr;
         justify-content: center;
     }
 
     .hobby-item{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
     .hobby-container p{
         display: none;
     }
+
+    .japan{
+        width: 50%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media (max-width: 425px) {
-    header{
-        height: 100vh;
-        width: 100vw;
-    }
-    
-    .menu-toggler{
-        right: 6rem;
-    }
-    
     .top-nav{
-        height: 120vh;
-        top: -120vh;
-        right: 0;
-        transition: all 650ms ease-in-out;
+        display: none;
     }
-    .top-nav.open{
-        top: 0;
+    .menu-toggler{
     }
 
-    .nav-list{
-        flex-direction: column;
+    header{
+
     }
 
-    .nav-link{
+    section{
+        padding: 0;
+    }
+    
+    .section-heading h1{
         font-size: 3rem;
     }
 
-    .about{
+    .about-heading h1{
+        font-size: 8rem;
     }
 }
